@@ -319,7 +319,7 @@ case "$action" in
     while [[ "$battery_percentage" -lt "$setting" ]]; do
 
       log "Battery at $battery_percentage%"
-      caffeinate -i sleep 60
+      caffeinate -is sleep 60
       battery_percentage=$( get_battery_percentage )
 
     done
@@ -343,7 +343,7 @@ case "$action" in
     while [[ "$battery_percentage" -gt "$setting" ]]; do
 
       log "Battery at $battery_percentage% (target $setting%)"
-      caffeinate -i sleep 60
+      caffeinate -is sleep 60
       battery_percentage=$( get_battery_percentage )
 
     done
