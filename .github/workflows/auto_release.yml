@@ -1,0 +1,23 @@
+on:
+  push:
+    tags:
+      - 'v*'
+
+name: AutoRelease
+
+permissions:
+  contents: write
+
+jobs:
+  create-github-release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Create Release
+        run: gh release create ${{ github.ref_name }} --notes-start-tag '${{ github.ref_name }}' --latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
