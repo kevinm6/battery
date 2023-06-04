@@ -1,3 +1,6 @@
+<div align="center">⚠️ Currently not in development! Using builtin Apple</div>
+
+
 # Battery management for Apple Silicon Macbook devices
 
 <!--toc:start-->
