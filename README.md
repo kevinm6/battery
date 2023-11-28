@@ -1,4 +1,6 @@
-<div align="center">⚠️ Currently not in development! Using builtin Apple</div>
+<div align="center">⚠️ Currently not in development! Using builtin Apple<br>
+However, if issues or PR are created, I'll give that a look.
+</div>
 
 
 # Battery management for Apple Silicon Macbook devices
